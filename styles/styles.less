@@ -1,0 +1,266 @@
+@import "global.less";
+
+.circle-top , .circle-bot {
+  width: 6.6875rem;
+}
+
+.circle-top, .circle-bot, .line-top, .line-bot {
+  position: fixed;
+  z-index: -100;
+}
+
+.circle-top {
+  top: -2rem;
+  left: -1rem;
+}
+
+.circle-bot {
+  top: 20rem;
+  right: -3rem;
+}
+
+.line-top {
+  width: 7rem;
+  right: -0.5rem;
+  top: 2rem;
+}
+
+.line-bot {
+  width: 18.75rem;
+  bottom: -1rem;
+  left: -1rem;
+}
+
+body {
+  background-image: url("../assets/images/background-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 0 1rem;
+  font-family: Inconsolata, serif;
+  overflow-x: hidden;
+  position: relative;
+  header {
+    text-align: center;
+    margin-top: 2.0625rem;
+    img {
+      width: 10.5rem;
+    }
+  }
+  section {
+    padding: 2.5rem 0;
+    text-align: center;
+    h1 {
+      .text-1-mobile();
+      color: @neutral-100;
+      margin-bottom: 1.25rem;
+    }
+    p {
+      color: @neutral-300;
+      .text-4-mobile();
+    }
+    h2 {
+      color: @neutral-100;
+      .text-5();
+      text-align: start;
+      font-stretch: 90%;
+    }
+    form {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      .file {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        label {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+          padding: 1.1875rem 1rem;
+          background-color: rgba(255, 255, 255, 0.08);
+          cursor: pointer;
+          .border();
+          color: @neutral-300;
+          .text-6-mobile();
+          img {
+            width: 3.125rem;
+            height: 3.125rem;
+            object-fit: cover;
+            padding: 0.625rem;
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 0.75rem;
+            border: 1px solid @neutral-700;
+          }
+          #removeBtn, #changeBtn {
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            .text-7();
+            color: @neutral-100;
+            padding: 0.25rem 0.5rem ;
+            text-transform: lowercase;
+            letter-spacing: 0;
+            border-radius: 0.25rem;
+            z-index: 100;
+          }
+          #removeBtn:first-letter , #changeBtn:first-letter {
+            text-transform: capitalize;
+          }
+          #removeBtn {
+            text-decoration: underline;
+          }
+        }
+        label:active {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+        .withFile:active {
+          background-color: rgba(255, 255, 255, 0.08);
+        }
+        p {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: @neutral-300;
+          .text-7();
+        }
+        .fileErr {
+          display: none;
+        }
+        .error {
+          font-weight: bolder;
+          color: red;
+        }
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        input {
+          background-color: rgba(255, 255, 255, 0.08);
+          padding: 1rem;
+          border: 1px solid @neutral-500;
+          border-radius: 0.75rem;
+          color: @neutral-300;
+          .text-6-mobile();
+          cursor: pointer;
+        }
+        input:active {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+      button {
+        background-color: @orange-500;
+        padding: 1.0625rem 0;
+        .text-5();
+        font-weight: 700;
+        border-radius: 0.75rem;
+        text-transform: uppercase;
+        font-stretch: 60%;
+        cursor: pointer;
+      }
+      button:active {
+        background-color: @orange-700;
+      }
+      button:disabled {
+        background-color: @neutral-300;
+        cursor: not-allowed;
+      }
+    }
+    .special {
+      .gradient-01()
+    }
+    .ticketEmail {
+      color: @orange-500;
+    }
+  }
+  .ticket-container {
+    display: none;
+    .ticket {
+      position: relative;
+      margin-top: 4.5rem;
+      text-align: start;
+      .ticketImage {
+        width: 100%;
+      }
+      .info {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 11fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.5rem;
+        width: 80%;
+        img {
+          width: 1.8125rem;
+          grid-row: 1/-1;
+        }
+        p {
+          grid-column: 2/-1;
+          .text-6-mobile();
+        }
+      }
+      .owner {
+        position: absolute;
+        display: flex;
+        width: 80%;
+        gap: 0.75rem;
+        bottom: 0.75rem;
+        left: 0.75rem;
+        #avatar {
+          width: 2.8125rem;
+          height: 2.8125rem;
+          object-fit: cover;
+          border-radius: 0.75rem;
+          border: 1px solid green;
+        }
+        div {
+          h2 {
+            .text-3-mobile();
+          }
+          p {
+            .text-6-mobile();
+            display: flex;
+            align-items: center;
+            gap: 0.3125rem;
+          }
+        }
+
+      }
+      .ticketNum {
+        color: @neutral-500;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%) rotate(90deg);
+        right: 0.75rem;
+      }
+    }
+  }
+}
+
+@media (pointer: fine) {
+  body {
+    section {
+      form {
+        label:hover, input:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+        .withFile:hover {
+          background-color: rgba(255, 255, 255, 0.08);
+        }
+        button:hover {
+          background-color: @orange-700;
+        }
+        .file {
+          label {
+            #removeBtn:hover, #changeBtn:hover {
+              background-color: rgba(255, 255, 255, 0.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}

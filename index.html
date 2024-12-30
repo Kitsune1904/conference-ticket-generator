@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Conference ticket generator</title>
+</head>
+<body>
+<img src="./assets/images/pattern-circle.svg" alt="circle" class="circle-top">
+<img src="./assets/images/pattern-circle.svg" alt="circle" class="circle-bot">
+<img src="./assets/images/pattern-squiggly-line-top.svg" alt="squiggly line" class="line-top">
+<img src="./assets/images/pattern-squiggly-line-bottom.svg" alt="squiggly line" class="line-bot">
+  <header>
+    <img src="./assets/images/logo-full.svg" alt="Logo">
+  </header>
+  <main>
+    <section class="form-container">
+      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p>Secure your spot at next year's biggest coding conference.</p>
+      <form>
+        <div class="file">
+          <h2>Upload Avatar</h2>
+          <label for="file" id="fileLabel">
+            <img src="./assets/images/icon-upload.svg" alt="upload" class="uploadFile">
+            <span class="fileControl">Drag and drop or click to upload</span></label>
+          <input type="file" id="file" name="file" accept="image/jpeg, image/png" hidden>
+          <p class="fileMessage"><img src="./assets/images/icon-info.svg" alt="info">Upload your photo (JPG or PNG, max size: 500KB).</p>
+          <p class="fileErr error"><img src="./assets/images/info-red.svg" alt="info">File too large. Please upload a photo under 500KB.</p>
+        </div>
+        <div class="userName">
+          <h2>Full Name</h2>
+          <input type="text" name="name" required>
+        </div>
+        <div class="userName">
+          <h2>Email Address</h2>
+          <input type="text" name="email" placeholder="example@email.com" required>
+        </div>
+        <div class="userGit">
+          <h2>GitHub Username</h2>
+          <input type="text" name="git" placeholder="@yourusername" required>
+        </div>
+        <button type="submit" id="submitBtn">Generate My Ticket</button>
+      </form>
+    </section>
+    <section class="ticket-container">
+      <h1>Congrats, <span class="ticketUser special"></span>! Your ticket is ready.</h1>
+      <p>We've emailed your ticket to <span class="ticketEmail"></span> and will send updates in the run-up to the event.</p>
+      <div class="ticket">
+        <img src="./assets/images/pattern-ticket.svg" alt="ticket" class="ticketImage">
+        <div class="info">
+          <img src="./assets/images/logo-mark.svg" alt="logo">
+          <h2>Coding Conf</h2>
+          <p>  Jan 31, 2025 / Austin, TX
+        </div>
+        <div class="owner">
+          <img src="./assets/images/image-avatar.jpg" alt="avatar" id="avatar" class="uploadFile">
+          <div>
+            <h2 class="ticketUser">hjfvlujfjvjh</h2>
+            <p><img src="./assets/images/icon-github.svg"><span class="ownerGit">@hjkgigig</span></p>
+          </div>
+        </div>
+        <p class="ticketNum">number</p>
+        </p>
+      </div>
+    </section>
+  </main>
+<script src="main.js" async></script>
+</body>
+</html>
