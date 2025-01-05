@@ -25,11 +25,9 @@ const showFileError = (isShow) => {
     if(isShow) {
         fileMessage.style.display = 'none';
         fileErr.style.display = 'flex';
-        submitBtn.disabled = true;
     } else {
         fileMessage.style.display = 'flex';
         fileErr.style.display = 'none';
-        submitBtn.disabled = false;
     }
 }
 
@@ -55,7 +53,6 @@ const addImage = (fileInput, container) => {
 const showErrorMsgs = (message) => {
     errorMsgs[message].style.display = 'block';
     inputs[message].classList.add('empty');
-
 }
 
 formFile.addEventListener('change', () => {
@@ -83,10 +80,7 @@ formFile.addEventListener('change', () => {
     changeBtn.addEventListener('click', () => {
         formFile.click();
     });
-
 })
-
-
 
 inputs.forEach((input) => {
     input.addEventListener('input', (e) => {
