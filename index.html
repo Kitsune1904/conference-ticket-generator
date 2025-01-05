@@ -31,17 +31,20 @@
         </div>
         <div class="userName">
           <h2>Full Name</h2>
-          <input type="text" name="name" required>
+          <input type="text" name="name" minlength="2" maxlength="30" required>
+          <p class="error">Please enter name</p>
         </div>
-        <div class="userName">
+        <div class="userEmail">
           <h2>Email Address</h2>
-          <input type="text" name="email" placeholder="example@email.com" required>
+          <input type="text" name="email" placeholder="example@email.com" maxlength="30" required>
+          <p class="error">Invalid email</p>
         </div>
         <div class="userGit">
           <h2>GitHub Username</h2>
-          <input type="text" name="git" placeholder="@yourusername" required>
+          <input type="text" name="git" placeholder="@yourusername" minlength="2" maxlength="30" required>
+          <p class="error">Invalid Git username, it must contain @</p>
         </div>
-        <button type="submit" id="submitBtn">Generate My Ticket</button>
+        <button type="submit" disabled id="submitBtn">Generate My Ticket</button>
       </form>
     </section>
     <section class="ticket-container">

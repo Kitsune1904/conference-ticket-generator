@@ -24,7 +24,7 @@
   font-size: 2.5rem;
   line-height: 110%;
   letter-spacing: -0.0625rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 .text-2-mobile {
   font-size: 1.5rem;
@@ -138,7 +138,6 @@ body header img {
 }
 body section {
   padding: 2.5rem 0;
-  text-align: center;
 }
 body section h1 {
   font-size: 1.875rem;
@@ -154,6 +153,10 @@ body section p {
   line-height: 120%;
   letter-spacing: -0.03125rem;
   font-weight: 300;
+}
+body section h1,
+body section p {
+  text-align: center;
 }
 body section h2 {
   color: #ffffff;
@@ -240,8 +243,6 @@ body section form .file p {
 }
 body section form .file .fileErr {
   display: none;
-}
-body section form .file .error {
   font-weight: bolder;
   color: red;
 }
@@ -264,6 +265,19 @@ body section form div input {
 }
 body section form div input:active {
   background-color: rgba(255, 255, 255, 0.2);
+}
+body section form div .error {
+  font-size: 0.875rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-weight: 300;
+  text-align: start;
+  display: none;
+  color: red;
+}
+body section form div .empty {
+  border: 1px solid red;
+  background-color: rgba(255, 0, 0, 0.05);
 }
 body section form button {
   background-color: #f57463;
@@ -325,6 +339,7 @@ body .ticket-container .ticket .info p {
   line-height: 120%;
   letter-spacing: 0;
   font-weight: 300;
+  text-align: start;
 }
 body .ticket-container .ticket .owner {
   position: absolute;
@@ -377,6 +392,139 @@ body .ticket-container .ticket .ticketNum {
   body section form .file label #removeBtn:hover,
   body section form .file label #changeBtn:hover {
     background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+@media (min-width: 48rem) {
+  body {
+    padding: 0 2rem;
+  }
+  body section,
+  body .ticket-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body section h1,
+  body .ticket-container h1 {
+    font-size: 3.75rem;
+    line-height: 110%;
+    letter-spacing: -0.0625rem;
+    font-weight: 700;
+  }
+  body section p,
+  body .ticket-container p {
+    font-size: 1.5rem;
+    line-height: 120%;
+    letter-spacing: -0.03125rem;
+    font-weight: 300;
+  }
+  body section form,
+  body .ticket-container form {
+    width: 32.625rem;
+  }
+  body .ticket-container .ticket {
+    max-width: 37.5rem;
+  }
+  body .ticket-container .ticket .info {
+    left: 1.5rem;
+    top: 1.5rem;
+    gap: 1.25rem;
+  }
+  body .ticket-container .ticket .info img {
+    width: 2.5rem;
+  }
+  body .ticket-container .ticket .info h2 {
+    font-size: 2.5rem;
+    line-height: 110%;
+    letter-spacing: -0.0625rem;
+    font-weight: 500;
+  }
+  body .ticket-container .ticket .info p {
+    font-size: 1.125rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 300;
+  }
+  body .ticket-container .ticket .owner {
+    left: 1.5rem;
+    bottom: 1.5rem;
+    align-items: center;
+    gap: 1rem;
+  }
+  body .ticket-container .ticket .owner #avatar {
+    width: 5rem;
+    height: 5rem;
+  }
+  body .ticket-container .ticket .owner div h2 {
+    font-size: 1.875rem;
+    line-height: 110%;
+    letter-spacing: -0.0625rem;
+    font-weight: 400;
+  }
+  body .ticket-container .ticket .owner div p {
+    font-size: 1.25rem;
+    line-height: 110%;
+    letter-spacing: -0.03125rem;
+    font-weight: 400;
+  }
+  body .ticket-container .ticket .ticketNum {
+    font-size: 1.875rem;
+    line-height: 110%;
+    letter-spacing: -0.0625rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 90rem) {
+  body {
+    padding: 0 17.1875rem;
+  }
+  body section h1 {
+    font-size: 3.75rem;
+    line-height: 110%;
+    letter-spacing: -0.0625rem;
+    font-weight: 700;
+  }
+  body section p {
+    font-size: 1.5rem;
+    line-height: 120%;
+    letter-spacing: -0.03125rem;
+    font-weight: 300;
+  }
+  body section form {
+    max-width: 28.75rem;
+  }
+  body .ticket-container .ticket {
+    margin: 6.9375rem 6.6875rem;
+  }
+  body .ticket-container .ticket .info {
+    left: 1.5rem;
+    top: 1.875rem;
+  }
+  body .ticket-container .ticket .info img {
+    width: 2.5rem;
+  }
+  body .ticket-container .ticket .info h2 {
+    font-size: 2.5rem;
+    line-height: 110%;
+    letter-spacing: -0.0625rem;
+    font-weight: 500;
+  }
+  body .ticket-container .ticket .info p {
+    font-size: 1.125rem;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-weight: 300;
+  }
+  body .ticket-container .ticket .owner {
+    left: 1.5rem;
+    bottom: 1.875rem;
+    align-items: center;
+    gap: 1rem;
+  }
+  body .ticket-container .ticket .owner #avatar {
+    width: 5rem;
+    height: 5rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
