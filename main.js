@@ -120,7 +120,7 @@ form.addEventListener('submit', (e) => {
     })
     document.querySelector('.ownerGit').innerText = formData.get('git').trim();
     document.querySelector('.ticketEmail').innerText = formData.get('email').trim();
-    ticketContainer.style.display = 'block';
+    ticketContainer.style.display = 'flex';
     formContainer.style.display = 'none';
     document.querySelector('.ticketNum').innerText = generateNumber();
 })
